@@ -255,8 +255,8 @@ void gestureModeSelect()
 				state = 4;
 				uLCD.cls();
 				uLCD.text_width(2);
-				uLCD.text_height(2);
-				uLCD.printf("\nGo to\nsong\nselection?\n");
+				uLCD.text_height(3);
+				uLCD.printf("\nGo to\nsong sel-\n-ection?\n");
 				return;
 			case 1:	// slope
 				state = 2;
