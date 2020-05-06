@@ -4,12 +4,10 @@ import time
 
 waitTime = 1.0
 
-# generate the waveform table
+# generate the song List
 signal1 = "cxcxgxgxaxaxgyswfxfxexexdxdxcyswswswswsw\n"
 signal2 = "gxexeyswfxdxdyswcxdxexfxgxgxgyswswswswsw\n"
-signal3 = "ewfwgwcxcwdwewfxawCwawfweygwfwdwgwcxswsw\n"
-# output formatter
-formatter = lambda x: "%c\r\n" % x
+signal3 = "ewfwgwcxcwcwdwewfxawCwawfwexgwfwdwgwcxsw\n"
 
 # send the waveform table to K66F
 serdev = '/dev/ttyACM0'
