@@ -384,25 +384,13 @@ void playNote(int freq)
 		}
 		audio.spk.play(waveform, kAudioTxBufferSize);
 	}
-	else
-	{
-		audio.spk.play(stopNote, kAudioTxBufferSize);
-	}
-	
+	else	audio.spk.play(stopNote, kAudioTxBufferSize);
 }
 void playSong(int j, int sp = 0)
 {
 	int i;
 	for (i = sp; state == 0 && i < songlength; i++) {
 		noteI = i;
-	/*	int length = song[j][i].len;
-		while (length--)
-		{
-		// the loop below will play the note for the duration of 1s
-			for (int k = 0; k < kAudioSampleFrequency / kAudioTxBufferSize / 2; ++k) 
-				queue.call(playNote, song[j][i].f);
-			if (length < 1) wait(2.0);
-		}*/
 		queue.call(playNote, song[j][i].f);
 		wait(0.5 * (float)(song[j][i].len));
 		queue.call(playNote, 0);
@@ -427,9 +415,8 @@ void PlayMode()
 				j = CircuIncre(j);
 				songI = j;
 			}
-			else {
+			else 
 				audio.spk.play(stopNote, kAudioTxBufferSize);
-			}
 		}
 	}
 }
