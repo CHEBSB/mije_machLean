@@ -109,7 +109,7 @@ int main(int argc, char* argv[]) {
 	for (int j = 0; j < numOfSong;)
 		if (pc.readable()) {
 			pc.scanf("%s", list[j++]);
-			wait(0.8f);
+			wait(0.8);
 		}
 	for (int j = 0; j < numOfSong; j++)
 		for (int i = 0, k = 0; k < 2 * songlength; k++) {
