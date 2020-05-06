@@ -63,6 +63,8 @@ typedef struct note {
 DA7212 audio;
 uLCD_4DGL uLCD(D1, D0, D2); // serial tx, serial rx, reset pin;
 Serial pc(USBTX, USBRX);
+Timer deboun1;
+Timer deboun2;
 InterruptIn sw2(SW2);
 InterruptIn sw3(SW3);
 EventQueue queue(32 * EVENTS_EVENT_SIZE);
